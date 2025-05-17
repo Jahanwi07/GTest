@@ -80,7 +80,11 @@ if not filtered_df.empty:
     # Word Cloud
     st.subheader("☁️ Word Cloud from Reviews")
     sentiment_to_plot = st.radio("Choose Sentiment for Word Cloud", ['Positive', 'Negative'])
-    word_text = " ".join(filtered_df[filtered_df['sentiment_label'] == sentiment_to_plot][''clean_review'])'].dropna().astype(str))
+   word_text = " ".join(
+    filtered_df[filtered_df['sentiment_label'] == sentiment_to_plot]['clean_review']
+    .dropna()
+    .astype(str)
+)
     
     if word_text.strip():
         wordcloud = WordCloud(width=800, height=400, background_color='white', colormap='Dark2').generate(word_text)
