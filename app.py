@@ -1,4 +1,8 @@
-# Load your processed data
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns# Load your processed data
+
 # Replace with your actual data loading method
 df = pd.read_csv('your_processed_data.csv')
 
